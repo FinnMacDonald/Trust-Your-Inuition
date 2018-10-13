@@ -15,18 +15,18 @@ public class TrustYourInuition extends ApplicationAdapter {
 	Texture [] snowTile = new Texture[4];
 	int[][] tileSeed = new int[50][30];
 	Texture badLogic;
-	private int bad_x = 400;
-	private int bad_y = 120;
+	//private int bad_x = 400;
+	//private int bad_y = 120;
 	
 	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		snowTile[0] = new Texture("Snow1.png");
-		snowTile[1] = new Texture("Snow2.png");
-		snowTile[2] = new Texture("Snow3.png");
-		snowTile[3] = new Texture("Snow4.png");
-		badLogic = new Texture("badlogic.jpg");
+		snowTile[0] = new Texture("assets/Snow1.png");
+		snowTile[1] = new Texture("assets/Snow2.png");
+		snowTile[2] = new Texture("assets/Snow3.png");
+		snowTile[3] = new Texture("assets/Snow4.png");
+		badLogic = new Texture("assets/badlogic.jpg");
 		for(int i = 0; i < 50; i++) {
 			for(int j = 0; j < 30; j++) {
 			   tileSeed[i][j] = new Random().nextInt(snowTile.length);   
@@ -50,22 +50,23 @@ public class TrustYourInuition extends ApplicationAdapter {
 			
 			// double length of each pixel in future
 		}
+		Player Nigel = new Player(100, 10, 100,"Harpoon",400, 120);
 		
 		if(Gdx.input.isKeyPressed(Keys.LEFT)) {
-			bad_x -= 200 * Gdx.graphics.getDeltaTime();
+			Nigel.moveLeft();
 		}
 		if(Gdx.input.isKeyPressed(Keys.RIGHT)) {
-			bad_x += 200 * Gdx.graphics.getDeltaTime();
+			Nigel.moveRight();
 		}
 		
 		if(Gdx.input.isKeyPressed(Keys.UP)) {
-			bad_y += 200 * Gdx.graphics.getDeltaTime();
+			Nigel.moveUp();
 		}
 		if(Gdx.input.isKeyPressed(Keys.DOWN)) {
-			bad_y -= 200 * Gdx.graphics.getDeltaTime();
+			Nigel.moveDown();
 		}
 		//batch.draw(img, 0, 0);
-		batch.draw(badLogic, bad_x, bad_y);
+		batch.draw(badLogic, Nigel.getXMove(), Nigel.getYMove());
 		batch.end();
 	}
 	
