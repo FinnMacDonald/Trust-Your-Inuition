@@ -1,7 +1,4 @@
 package com.trust.inuition;
-
-
-
 import com.badlogic.gdx.graphics.Texture;
 
 public class Harpoon extends Weapon {
@@ -26,6 +23,12 @@ public class Harpoon extends Weapon {
 	public boolean reload() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+
+	@Override
+	public Texture[] getTextures() {
+		return sprites;
 	}
 
 }
