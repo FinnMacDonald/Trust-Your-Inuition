@@ -20,22 +20,22 @@ public class Player {
 	}
 	
 	public int getHealth() {
-		return this.health;
+		return health;
 	}
 	public int getAttackVal() {
-		return this.attackVal;
+		return attackVal;
 	}
 	public int getTemperatureVal() {
-		return this.temperatureVal;
+		return temperatureVal;
 	}
 	public String getWeapon() {
-		return this.currentWeapon;
+		return currentWeapon;
 	}
 	public int getXMove() {
-		return this.bad_x;
+		return bad_x;
 	}
 	public int getYMove() {
-		return this.bad_y;
+		return bad_y;
 	}
 
 

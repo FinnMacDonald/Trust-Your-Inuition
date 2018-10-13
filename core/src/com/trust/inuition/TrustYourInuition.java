@@ -26,7 +26,7 @@ public class TrustYourInuition extends ApplicationAdapter {
 		snowTile[1] = new Texture("assets/Snow2.png");
 		snowTile[2] = new Texture("assets/Snow3.png");
 		snowTile[3] = new Texture("assets/Snow4.png");
-		badLogic = new Texture("assets/badlogic.jpg");
+		badLogic = new Texture("assets/NigelSideLRight.png");
 		for(int i = 0; i < 50; i++) {
 			for(int j = 0; j < 30; j++) {
 			   tileSeed[i][j] = new Random().nextInt(snowTile.length);   

@@ -1,3 +1,5 @@
+package com.trust.inuition;
+
 
 
 import com.badlogic.gdx.graphics.Texture;
