@@ -8,10 +8,9 @@ public class Harpoon extends Weapon {
 	}
 
 	
-	public boolean shoot(String direction) {
+	public Projectile shoot(String direction) {
 		Projectile bullet = new Projectile(damage, direction, 10);
-		
-		return false;
+		return bullet;
 	}
 
 	@Override

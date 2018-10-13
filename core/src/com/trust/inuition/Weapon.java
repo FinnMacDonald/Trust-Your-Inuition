@@ -19,7 +19,7 @@ public abstract class Weapon {
 		this.sprites=sprites;
 	}
 	
-	public abstract boolean shoot(String direction);
+	public abstract Projectile shoot(String direction);
 	
 	public abstract int updateAmmo(int ammoToUodate);
 	
