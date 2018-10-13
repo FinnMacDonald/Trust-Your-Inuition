@@ -9,7 +9,8 @@ public class Harpoon extends Weapon {
 
 	
 	public boolean shoot(String direction) {
-		// TODO Auto-generated method stub
+		Projectile bullet = new Projectile(damage, direction, 10);
+		
 		return false;
 	}
 
