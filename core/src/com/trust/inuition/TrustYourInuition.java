@@ -15,6 +15,7 @@ public class TrustYourInuition extends ApplicationAdapter {
 	Texture [] snowTile = new Texture[4];
 	int[][] tileSeed = new int[50][30];
 	Texture badLogic;
+	Player Nigel = new Player(100, 10, 100,"Harpoon",400, 120);
 	//private int bad_x = 400;
 	//private int bad_y = 120;
 	
@@ -26,13 +27,14 @@ public class TrustYourInuition extends ApplicationAdapter {
 		snowTile[1] = new Texture("assets/Snow2.png");
 		snowTile[2] = new Texture("assets/Snow3.png");
 		snowTile[3] = new Texture("assets/Snow4.png");
-		badLogic = new Texture("assets/NigelSideLRight.png");
+		badLogic = new Texture("assets/NigelFrontStand.png");
 		for(int i = 0; i < 50; i++) {
 			for(int j = 0; j < 30; j++) {
 			   tileSeed[i][j] = new Random().nextInt(snowTile.length);   
 			}
 			
 		}
+		
 		
 		
 		
@@ -50,7 +52,7 @@ public class TrustYourInuition extends ApplicationAdapter {
 			
 			// double length of each pixel in future
 		}
-		Player Nigel = new Player(100, 10, 100,"Harpoon",400, 120);
+		
 		
 		if(Gdx.input.isKeyPressed(Keys.LEFT)) {
 			Nigel.moveLeft();
